@@ -1,21 +1,17 @@
 //
 //  ContentView.swift
-//  sandstormapptest
+//  sandstormtestapp
 //
-//  Created by Revan SADIGLI on 17.02.2024.
+//  Created by Revan SADIGLI on 18.02.2024.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            MainScreen(viewModel: MainScreenViewModel())
         }
-        .padding()
     }
 }
 

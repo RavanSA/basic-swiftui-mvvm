@@ -8,11 +8,5 @@
 import SwiftUI
 
 class DetailScreenViewModel: ObservableObject {
-    @Published var showTheScreen = false
-    
-    func dismiss() {
-        withAnimation {
-            showTheScreen = false
-        }
-    }
+
 }

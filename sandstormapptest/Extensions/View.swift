@@ -1,8 +1,25 @@
 //
 //  View.swift
-//  sandstormapptest
+//  sandstormtestapp
 //
-//  Created by Revan SADIGLI on 17.02.2024.
+//  Created by Revan SADIGLI on 18.02.2024.
 //
 
-import Foundation
+import SwiftUI
+
+extension View {
+    
+    @ViewBuilder
+    func `if`<Content: View>(
+        _ condition: @autoclosure () -> Bool,
+        transform: (Self) -> Content
+    ) -> some View {
+        if condition() {
+            transform(self)
+        } else {
+            self
+        }
+    }
+
+    
+}
